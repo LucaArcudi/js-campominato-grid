@@ -20,9 +20,13 @@ buttonElement.addEventListener("click", function(){
         divSquareElement.innerHTML = (i);
 
         divSquareParentElement.appendChild(divSquareElement);
+
+        divSquareElement.addEventListener("click", function (){
+            divSquareElement.classList.add("square-clicked")
+        })
     }
 
-    
+
 
 })
 

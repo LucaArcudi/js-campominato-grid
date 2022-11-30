@@ -20,3 +20,7 @@ div.game-container{
     width: calc(100% / 10);
     height: 50px;
 }
+
+.square-clicked{
+    background-color: #59ffc8;
+}
