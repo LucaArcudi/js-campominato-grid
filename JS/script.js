@@ -11,16 +11,18 @@
 let buttonElement = document.querySelector("button");
 buttonElement.addEventListener("click", function(){
 
+    let divSquareParentElement = document.querySelector("div.game-container");
+    divSquareParentElement.classList.toggle("d-none")
+
     for(let i = 1; i <= 100; i++){
         let divSquareElement = document.createElement("div");
-        divSquareElement.classList.add("square", "square-width", "text-center", "p-1");
+        divSquareElement.classList.add("square", "d-flex", "align-items-center", "justify-content-center");
         divSquareElement.innerHTML = (i);
-        // console.log(divSquareElement);
-    
-        let divSquareParentElement = document.querySelector("main.container-fluid div.row");
-    
+
         divSquareParentElement.appendChild(divSquareElement);
     }
+
+    
 
 })
 

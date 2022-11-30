@@ -1,12 +1,22 @@
-main{
+header{
+    height: 10vh;
+}
+
+main > div.row{
     background-color: #7FFFD4;
-    /* height: 80vh; */
+    height: 80vh;
 }
 
-.square-width{
+
+
+div.game-container{
+    width: 500px;
+    margin: 7.5rem auto;
+    border: 1px solid black;
+}
+
+.square{
+    border: 1px solid black;
     width: calc(100% / 10);
-}
-
-main.container-fluid div.row{
-    padding: 2rem 5rem;
+    height: 50px;
 }
