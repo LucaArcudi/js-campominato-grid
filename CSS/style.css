@@ -9,16 +9,17 @@ main > div.row{
 
 
 
-div.game-container{
+div#game-container{
     width: 500px;
     margin: 7.5rem auto;
-    border: 1px solid black;
+    border: 1px solid rgb(0, 0, 0);
 }
 
 .square{
-    border: 1px solid black;
+    border: 1px solid rgb(0, 0, 0);
     width: calc(100% / 10);
     height: 50px;
+    cursor: pointer;
 }
 
 .square-clicked{
