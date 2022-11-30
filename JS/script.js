@@ -8,15 +8,19 @@
 // Proviamo sempre prima con dei console.log() per capire se stiamo ricevendo i dati giusti.
 // Le validazioni e i controlli possiamo farli anche in un secondo momento.
 
+let buttonElement = document.querySelector("button");
+buttonElement.addEventListener("click", function(){
 
+    for(let i = 1; i <= 100; i++){
+        let divSquareElement = document.createElement("div");
+        divSquareElement.classList.add("square", "square-width", "text-center", "p-1");
+        divSquareElement.innerHTML = (i);
+        // console.log(divSquareElement);
+    
+        let divSquareParentElement = document.querySelector("main.container-fluid div.row");
+    
+        divSquareParentElement.appendChild(divSquareElement);
+    }
 
-for(let i = 1; i <= 100; i++){
-    let divSquareElement = document.createElement("div");
-    divSquareElement.classList.add("square");
-    divSquareElement.innerHTML = (i);
-    // console.log(divSquareElement);
+})
 
-    let divSquareParentElement = document.querySelector("div.row div.col-12");
-
-    divSquareParentElement.appendChild(divSquareElement);
-}

@@ -1,4 +1,12 @@
-main div.row{
+main{
     background-color: #7FFFD4;
     /* height: 80vh; */
+}
+
+.square-width{
+    width: calc(100% / 10);
+}
+
+main.container-fluid div.row{
+    padding: 2rem 5rem;
 }
