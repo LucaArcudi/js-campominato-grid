@@ -21,20 +21,8 @@ buttonElement.addEventListener("click", function(){
 
         for(let i = 1; i <= 100; i++){
 
-            const divSquareElement = getNewSquare();
-    
+            const divSquareElement = getNewSquare(i);
             divSquareElement.innerHTML = `<span class="m-auto">${i}</span>`;
-
-            
-
-            divSquareElement.addEventListener("click", function (){
-
-                divSquareElement.classList.toggle("square-clicked");
-                console.log("");
-                console.log(`${"Hai cliccato la cella numero:"} ${i}`);
-
-            })
-    
             divSquareParentElement.appendChild(divSquareElement);
     
         }
@@ -42,17 +30,20 @@ buttonElement.addEventListener("click", function(){
     
 })
 
-function getNewSquare () {
+function getNewSquare (index) {
 
     const divNewSquare = document.createElement("div");
-
     divNewSquare.classList.add("square", "d-flex");
     
+    divNewSquare.addEventListener("click", function (){
+
+        divNewSquare.classList.toggle("square-clicked");
+        console.log("");
+        console.log(`${"Hai cliccato la cella numero:"} ${index}`);
+
+    })
     
-
-
     return divNewSquare;
-
 }
 
 
