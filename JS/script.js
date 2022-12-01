@@ -8,28 +8,51 @@
 // Proviamo sempre prima con dei console.log() per capire se stiamo ricevendo i dati giusti.
 // Le validazioni e i controlli possiamo farli anche in un secondo momento.
 
-let divSquareParentElement = document.getElementById("game-container");
 
-let buttonElement = document.querySelector("button");
+
+let buttonElement = document.querySelector("a");
+
 buttonElement.addEventListener("click", function(){
 
+        let divSquareParentElement = document.getElementById("game-container");
+        divSquareParentElement.classList.remove("d-none");
 
-    divSquareParentElement.classList.toggle("d-none")
+        divSquareParentElement.innerHTML = "";
 
-    for(let i = 1; i <= 100; i++){
+        for(let i = 1; i <= 100; i++){
 
-        let divSquareElement = document.createElement("div");
-        divSquareElement.classList.add("square", "d-flex", "align-items-center", "justify-content-center");
-        divSquareElement.innerHTML = (i);
+            const divSquareElement = getNewSquare();
+    
+            divSquareElement.innerHTML = `<span class="m-auto">${i}</span>`;
 
-        divSquareParentElement.appendChild(divSquareElement);
+            
 
-        divSquareElement.addEventListener("click", function (){
-            divSquareElement.classList.toggle("square-clicked")
-            console.log(`${"Hai cliccato la cella numero:"} ${i}`);
-        })
+            divSquareElement.addEventListener("click", function (){
 
-    }
+                divSquareElement.classList.toggle("square-clicked");
+                console.log("");
+                console.log(`${"Hai cliccato la cella numero:"} ${i}`);
+
+            })
+    
+            divSquareParentElement.appendChild(divSquareElement);
+    
+        }
+
+    
 })
+
+function getNewSquare () {
+
+    const divNewSquare = document.createElement("div");
+
+    divNewSquare.classList.add("square", "d-flex");
+    
+    
+
+
+    return divNewSquare;
+
+}
 
 
